@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    {% endblock stylesheets %}
+    {% block scripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.13.0/underscore-umd-min.js"></script>
+    {% endblock scripts %}
+    <title>El Joc del Mundial 2018 - {% block title %}{% endblock title %}</title>
+    </head>
+
+    <body>
+    <div id="contenidor">
+    <div id="cap"><img src="{% static "img/cap.png" %}"></div>
+    <div id="contingut">
+
+    <div id="barres">
+    <div id="barra1">
+    <a href="{% url 'joc:index' %}">Inici</a>
+    {% block navegacio %}
+    {% endblock navegacio %}
+    </div>
+
+    <div id="barra2">
+    {% if user.is_authenticated %}
+    <strong>
+    {{ user.username }}
+    </strong>
+    <a href="/registration/logout">Desconnecta</a>
+    {% else %}
+    &nbsp;
+    {% endif %}
+    </div>
+    </div>
+
+    <div id="content">
+    {% block content %}{% endblock content %}
+    </div>
+    </div>
+    <div id="cul">2006-2021 - Pàgina creada pel Xavier Janer. Sou lliures per fer-ne el que vulgueu.</div>
+    </div>
+    </body>
+</html>
