@@ -1,1 +1,1 @@
-{% load i18n %}{% trans "Account approval on" %} {{ site.name }}
+../django_registration/admin_approve_email_subject.txt
