@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from registration.models import RegistrationProfile
-from registration.signals import user_registered
+# from django_registration.models import RegistrationProfile
+from django_registration.signals import user_registered
 
 
 class Jugador(models.Model):
@@ -144,10 +144,10 @@ class PronosticPartit(models.Model):
 
 
 def user_registered_callback(sender, user, request, **kwargs):
-    # We skip the user activation step
-    profile = RegistrationProfile.objects.get(user_id=user.id)
-    profile.activated = True
-    profile.save()
+    # # We skip the user activation step
+    # profile = RegistrationProfile.objects.get(user_id=user.id)
+    # profile.activated = True
+    # profile.save()
 
     Jugador.objects.create(
         usuari=user,

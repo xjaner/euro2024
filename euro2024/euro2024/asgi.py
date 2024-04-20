@@ -1,5 +1,5 @@
 """
-ASGI config for euro2021 project.
+ASGI config for euro2024 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'euro2021.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'euro2024.settings')
 
 application = get_asgi_application()

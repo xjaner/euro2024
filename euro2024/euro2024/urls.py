@@ -1,4 +1,4 @@
-"""euro2021 URL Configuration
+"""euro2024 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-import registration.backends.admin_approval.urls as registration_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('joc.urls', namespace='joc')),
-    path('registration/', include(registration_urls)),
+    path('registration/', include('django_registration.backends.activation.urls')),
+    path('registration/', include('django.contrib.auth.urls')),
 ]
 
 

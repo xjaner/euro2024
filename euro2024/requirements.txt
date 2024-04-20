@@ -1,12 +1,13 @@
-asgiref==3.3.1
-Django==3.1.7
-psycopg2==2.8.6
+asgiref
+Django
+psycopg2
 # env LDFLAGS='-L/usr/local/lib -L/usr/local/opt/openssl/ -L/usr/local/opt/readline/lib' pip install psycopg2
-git+git://github.com/xjaner/django-registration
+# git+git://github.com/xjaner/django-registration
+django-registration
 # django-registration-redux==2.9
-pytz==2021.1
-sqlparse==0.4.1
-Unipath==1.1
+pytz
+sqlparse
+Unipath
 
 #### apt-get packages:
 # gettext
