@@ -3,7 +3,7 @@ Django
 psycopg2
 # env LDFLAGS='-L/usr/local/lib -L/usr/local/opt/openssl/ -L/usr/local/opt/readline/lib' pip install psycopg2
 # git+git://github.com/xjaner/django-registration
-django-registration
+django-registration @ git+https://github.com/xjaner/django-registration@feature/approval_workflow
 # django-registration-redux==2.9
 pytz
 sqlparse
