@@ -124,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ca'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
@@ -177,6 +177,7 @@ ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, u
 ## REGISTRATION_ADMINS = [('Xavier', 'xjaner@gmail.com')]
 ## LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/registration/login'
+LOGOUT_REDIRECT_URL = '/registration/login'
 ##
 ## # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 ## # EMAIL_FILE_PATH = '/tmp/app-messages'  # change this to a proper location

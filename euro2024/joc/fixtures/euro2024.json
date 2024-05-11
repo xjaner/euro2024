@@ -74,7 +74,7 @@
     "pk": 1,
     "fields": {
         "nom": "Alemanya",
-        "bandera": "ger.png",
+        "bandera": "ale.png",
         "grup": "1"
     }
   },
@@ -83,7 +83,7 @@
     "pk": 2,
     "fields": {
         "nom": "Escòcia",
-        "bandera": "sco.png",
+        "bandera": "esc.png",
         "grup": "1"
     }
   },
@@ -92,7 +92,7 @@
     "pk": 3,
     "fields": {
         "nom": "Hongria",
-        "bandera": "hun.png",
+        "bandera": "hon.png",
         "grup": "1"
     }
   },
@@ -110,7 +110,7 @@
     "pk": 5,
     "fields": {
         "nom": "Espanya",
-        "bandera": "spa.png",
+        "bandera": "esp.png",
         "grup": "2"
     }
   },
@@ -146,7 +146,7 @@
     "pk": 9,
     "fields": {
         "nom": "Eslovènia",
-        "bandera": "slo.png",
+        "bandera": "svn.png",
         "grup": "3"
     }
   },
@@ -155,7 +155,7 @@
     "pk": 10,
     "fields": {
         "nom": "Dinamarca",
-        "bandera": "den.png",
+        "bandera": "din.png",
         "grup": "3"
     }
   },
@@ -163,7 +163,7 @@
     "model": "joc.Equip",
     "pk": 11,
     "fields": {
-        "nom": "Serbia",
+        "nom": "Sèrbia",
         "bandera": "ser.png",
         "grup": "3"
     }
@@ -173,7 +173,7 @@
     "pk": 12,
     "fields": {
         "nom": "Anglaterra",
-        "bandera": "eng.png",
+        "bandera": "ang.png",
         "grup": "3"
     }
   },
@@ -181,8 +181,8 @@
     "model": "joc.Equip",
     "pk": 13,
     "fields": {
-        "nom": "Guanyador PO-A",
-        "bandera": "unk.png",
+        "nom": "Polònia",
+        "bandera": "pol.png",
         "grup": "4"
     }
   },
@@ -191,7 +191,7 @@
     "pk": 14,
     "fields": {
         "nom": "Holanda",
-        "bandera": "ned.png",
+        "bandera": "hol.png",
         "grup": "4"
     }
   },
@@ -244,8 +244,8 @@
     "model": "joc.Equip",
     "pk": 20,
     "fields": {
-        "nom": "Guanyador PO-B",
-        "bandera": "unk.png",
+        "nom": "Ucraïna",
+        "bandera": "ukr.png",
         "grup": "5"
     }
   },
@@ -262,8 +262,8 @@
     "model": "joc.Equip",
     "pk": 22,
     "fields": {
-        "nom": "Guanyador PO-C",
-        "bandera": "unk.png",
+        "nom": "Geòrgia",
+        "bandera": "geo.png",
         "grup": "6"
     }
   },
@@ -281,7 +281,7 @@
     "pk": 24,
     "fields": {
         "nom": "Txèquia",
-        "bandera": "cze.png",
+        "bandera": "txe.png",
         "grup": "6"
     }
   },
