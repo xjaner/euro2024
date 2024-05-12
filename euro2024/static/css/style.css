@@ -51,8 +51,9 @@ width: 100px;
 
 #barres{
 width: 1200px;
-height: 20px;
+height: 25px;
 font-size: 13px;
+padding-top: 5px;
 }
 
 #barres a{
@@ -62,6 +63,18 @@ text-decoration: none;
 }
 
 #barres a:hover{
+text-shadow:0px 0px 0.4px black;
+}
+
+#barres button{
+color: black;
+text-align: left;
+text-decoration: none;
+border: 0px;
+background-color: #cccccc;
+}
+
+#barres button:hover{
 text-shadow:0px 0px 0.4px black;
 }
 

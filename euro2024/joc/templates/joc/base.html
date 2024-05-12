@@ -18,7 +18,9 @@
 
     <div id="barres">
     <div id="barra1">
-    <a href="{% url 'joc:index' %}">Inici</a>
+    <form style="float: left;" action="{% url 'joc:index' %}" method="post">{% csrf_token %}
+    <button type="barres" type="submit">Inici</button>
+    </form>
     {% block navegacio %}
     {% endblock navegacio %}
     </div>
@@ -28,7 +30,9 @@
     <strong>
     {{ user.username }}
     </strong>
-    <form action="{% url 'logout' %}" method="post">{% csrf_token %}<button type="submit">Desconnecta</button></form>
+    <form style="float: right;" action="{% url 'logout' %}" method="post">{% csrf_token %}
+    <button type="barres" type="submit">Desconnecta</button>
+    </form>
     {% else %}
     &nbsp;
     {% endif %}
