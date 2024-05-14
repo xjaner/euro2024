@@ -8,6 +8,7 @@ django-registration @ git+https://github.com/xjaner/django-registration@feature/
 pytz
 sqlparse
 Unipath
+uWSGI
 
 #### apt-get packages:
 # gettext
