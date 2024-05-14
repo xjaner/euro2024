@@ -6,25 +6,25 @@ services:
     expose:
       - 5432
     volumes:
-      # - /home/xavier/dev/data/euro2020/pg_data:/var/lib/postgresql/data
-      # - /home/xavier/dev/data/euro2020/pg_backups:/pg_backups
-      - /Users/xjaner/dev/data/euro2020/pg_data:/var/lib/postgresql/data
-      - /Users/xjaner/dev/data/euro2020/pg_backups:/pg_backups
+      - /home/xavier/dev/data/euro2024/pg_data:/var/lib/postgresql/data
+      - /home/xavier/dev/data/euro2024/pg_backups:/pg_backups
+      # - /Users/xjaner/dev/data/euro2024/pg_data:/var/lib/postgresql/data
+      # - /Users/xjaner/dev/data/euro2024/pg_backups:/pg_backups
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
     volumes:
-      # - /home/xavier/dev/euro2020/euro2020:/opt/euro2020
-      - /Users/xjaner/dev/euro2020/euro2020:/opt/euro2020
+      - /home/xavier/dev/euro2024/euro2024:/opt/euro2024
+      # - /Users/xjaner/dev/euro2024/euro2024:/opt/euro2024
     ports:
       - "8000:8000"
       - "8001:8001"
     depends_on:
       - db
-        # command: uwsgi --ini /opt/euro2020/uwsgi.ini
-    command: python /opt/euro2020/manage.py runserver 0.0.0.0:8000
+    command: uwsgi --ini /opt/euro2024/uwsgi.ini
+    # command: python /opt/euro2024/manage.py runserver 0.0.0.0:8000
 
 volumes:
   pg_data: {}
