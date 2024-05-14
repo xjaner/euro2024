@@ -18,8 +18,8 @@ EXPOSE 8000
 EXPOSE 8001
 
 # Will also be done in docker-compose
-COPY ./euro2020 /opt/euro2020
-RUN pip install -r /opt/euro2020/requirements.txt
+COPY ./euro2024 /opt/euro2024
+RUN pip install -r /opt/euro2024/requirements.txt
 
 # Temporarily disabled
-# CMD ["uwsgi", "--ini", "/opt/euro2020/uwsgi.ini"]
+# CMD ["uwsgi", "--ini", "/opt/euro2024/uwsgi.ini"]
