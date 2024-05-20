@@ -187,3 +187,11 @@ LOGOUT_REDIRECT_URL = '/registration/login'
 ##
 REGISTRATION_FORM = 'joc.forms.RegistrationFormComplete'
 SEND_ACTIVATION_EMAIL = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'eljocdeleurocopa@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('EURO_GMAIL_APP_PWD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'El Joc de l\'Eurocopa'
