@@ -195,3 +195,5 @@ EMAIL_HOST_PASSWORD = os.getenv('EURO_GMAIL_APP_PWD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'El Joc de l\'Eurocopa'
+
+CSRF_TRUSTED_ORIGINS = ['https://*.disbarat.cat','https://*.127.0.0.1']
