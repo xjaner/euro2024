@@ -81,23 +81,25 @@ if os.getenv('DOCKER_CONTAINER'):
 else:
     POSTGRES_HOST = '127.0.0.1'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if os.getenv('DOCKER_CONTAINER'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'euro2024',
+            'USER': 'postgres',
+            'PASSWORD': 'postgres',
+            'HOST': POSTGRES_HOST,
+            'PORT': '5432',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'euro2024',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': POSTGRES_HOST,
-#         'PORT': '5432',
-#     }
-# }
 
 
 # Password validation
