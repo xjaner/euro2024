@@ -11,5 +11,8 @@ def approve_players(modeladmin, request, queryset):
 
 class JugadorAdmin(admin.ModelAdmin):
     actions = [approve_players]
+    readonly_fields = ('usuari', 'posicio', 'posicio_anterior', 'punts', 'punts_anterior',
+                       'punts_resultats', 'punts_grups', 'punts_equips_encertats')
+    list_filter = ['is_active']
 
 admin.site.register(Jugador, JugadorAdmin)
