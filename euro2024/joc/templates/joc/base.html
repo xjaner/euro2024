@@ -34,7 +34,9 @@
     <button type="barres" type="submit">Desconnecta</button>
     </form>
     {% else %}
-    &nbsp;
+    <form style="float: right;" action="{% url 'logout' %}" method="post">{% csrf_token %}
+    <button type="barres" type="submit">&nbsp;</button>
+    </form>
     {% endif %}
     </div>
     </div>

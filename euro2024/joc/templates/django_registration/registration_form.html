@@ -8,7 +8,18 @@
 <form method="post" action="" name="f1">
     {% csrf_token %}
     <table align="center">
-    {{ form.as_table }}
+    {% for field in form %}
+        <div class="fieldWrapper">
+            {% for error in field.errors %}
+            <tr><td>{{ error }}</td></tr>
+            {% endfor %}
+            <tr><th>{{ field.label_tag }}</th><td>{{ field }}</td>
+            {% if field.help_text %}
+              <td><a class="helptext" id="{{ field.auto_id }}_helptext">?<span>{{ field.help_text|safe }}</span></a></td>
+            {% endif %}
+            </tr>
+        </div>
+    {% endfor %}
     </table>
 <p></p>
 <div id="taula">
