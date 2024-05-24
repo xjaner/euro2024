@@ -177,7 +177,7 @@ ID_ADMIN = 1
 ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, use a different vlue
 ## REGISTRATION_AUTO_LOGIN = True  # Automatically log the user in.
 ## REGISTRATION_ADMINS = [('Xavier', 'xjaner@gmail.com')]
-## LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/registration/login'
 LOGOUT_REDIRECT_URL = '/registration/login'
 ##
