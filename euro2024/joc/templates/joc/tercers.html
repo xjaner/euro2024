@@ -31,7 +31,7 @@ Si no, pots continuar i la màquina escollirà aleatòriament els 4 tercers clas
 <br><br>
 <div id="classificacio_tercers">
 <table width="450" align="center">
-<tr><td colspan="6" class="dia">CLASSIFICACIÓ TERCERS CLASSIFICATS:</td></tr>
+<tr><td colspan="7" class="dia">CLASSIFICACIÓ TERCERS CLASSIFICATS:</td></tr>
 <tr>
 <td class="negreta_bandera">Grup</td>
 <td class="negreta_bandera">Bandera</td>
@@ -39,6 +39,7 @@ Si no, pots continuar i la màquina escollirà aleatòriament els 4 tercers clas
 <td class="negreta">Punts</td>
 <td class="negreta">Diferència</td>
 <td class="negreta">Gols</td>
+<td class="negreta">Victòries</td>
 </tr>
 {% for tercer in tercers %}
 <tr>
@@ -48,6 +49,7 @@ Si no, pots continuar i la màquina escollirà aleatòriament els 4 tercers clas
 <td align="center" class="classif">{{ tercer.punts }}</td>
 <td align="center" class="classif">{{ tercer.diferencia }}</td>
 <td align="center" class="classif">{{ tercer.favor }}</td>
+<td align="center" class="classif">{{ tercer.victories }}</td>
 </tr>
 {% endfor %}
 </table>

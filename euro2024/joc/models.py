@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q, F
 from django.contrib.auth.models import User
 
 # from django_registration.models import RegistrationProfile
@@ -43,6 +44,16 @@ class PronosticEquipGrup(models.Model):
     punts = models.PositiveSmallIntegerField(default=0)
     diferencia = models.SmallIntegerField(default=0)
     favor = models.PositiveSmallIntegerField(default=0)
+
+    def victories(self):
+        return PronosticPartit.objects.filter(
+            Q(jugador=self.jugador)
+            & Q(partit_id__lte=36)  # que el partit sigui de la primera fase
+            & (
+                (Q(equip1=self.equip) & Q(gols1__gt=F('gols2')))
+                | (Q(equip2=self.equip) & Q(gols2__gt=F('gols1')))
+            )
+        ).count()
 
 
 class Estadi(models.Model):

@@ -36,7 +36,7 @@ ULTIM_PARTIT_QUARTS = 48
 ULTIM_PARTIT_SEMIS = 50
 
 
-FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor)  # TODO: Afegir-hi número de victòries
+FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor, x.victories())
 
 # # Mundial
 # EMPARELLAMENTS_VUITENS = {
@@ -49,19 +49,19 @@ FUNCIO_ORDRE = lambda x: (x.punts, x.diferencia, x.favor)  # TODO: Afegir-hi nú
 #     55: ((1, 'F'), (2, 'E')),
 #     56: ((1, 'H'), (2, 'G')),
 # }
-# 
+#
 # EMPARELLAMENTS_QUARTS = {
 #     57: (49, 50),
 #     58: (53, 54),
 #     59: (51, 52),
 #     60: (55, 56),
 # }
-# 
+#
 # EMPARELLAMENTS_SEMIS = {
 #     61: (57, 58),
 #     62: (59, 60),
 # }
-# 
+#
 # EMPARELLAMENT_CONSOLACIO = {
 #     63: (61, 62),
 # }
