@@ -77,7 +77,7 @@ def entrada_admin(request):
         {
             'formset': admin_form,
             'height_banderes': 19,
-            'width_banderes': 28,
+            'width_banderes': 19,
             'border_banderes': 1,
             'cal_entrar_grups': cal_entrar_grups,
         }

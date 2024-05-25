@@ -77,7 +77,7 @@ def pronostic_admin(request):
                         'text_grup': 'Tercers empatats',
                         'grup': 'F',
                         'height_banderes': 19,
-                        'width_banderes': 28,
+                        'width_banderes': 19,
                         'border_banderes': 1,
                     }
                 )
@@ -137,7 +137,7 @@ def pronostic_admin(request):
             'formset': grup_form,
             'equips_classificacio': sorted(equips_classificacio, key=lambda k: k.posicio),
             'height_banderes': 19,
-            'width_banderes': 28,
+            'width_banderes': 19,
             'border_banderes': 1,
             'grup': grup.nom,
             'seguent_grup': seguent_grup,

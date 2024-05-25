@@ -77,7 +77,7 @@ def pronostic(request):
                         'text_grup': 'Tercers empatats',
                         'grup': 'F',
                         'height_banderes': 19,
-                        'width_banderes': 28,
+                        'width_banderes': 19,
                         'border_banderes': 1,
                     }
                 )
