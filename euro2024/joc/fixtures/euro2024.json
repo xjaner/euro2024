@@ -864,7 +864,7 @@
     "model": "joc.Partit",
     "pk": 48,
     "fields": {
-      "diaihora": "2024-07-06T18:00:00+03:00",
+      "diaihora": "2024-07-06T18:00:00+02:00",
       "estadi": 6,
       "grup": 8
     }
