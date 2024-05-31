@@ -128,7 +128,7 @@ def pronostic(request):
                 deshabilita_submit = True
                 break
 
-    return render(
+    response = render(
         request,
         'joc/{template}'.format(template=template),
         {
@@ -143,3 +143,8 @@ def pronostic(request):
             'text_grup': TEXT_GRUP[nom_grup],
         }
     )
+    # The lines below are needed to avoid mixed classification when Back button is pressed
+    response["Cache-Control"] = "no-cache, no-store, must-revalidate" # HTTP 1.1.
+    response["Pragma"] = "no-cache" # HTTP 1.0.
+    response["Expires"] = "0" # Proxies.
+    return response
