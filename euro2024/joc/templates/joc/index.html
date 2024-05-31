@@ -7,7 +7,7 @@
 
 {% block nav %}
 <ul class="nav">
-    <li>{% block nav-pronostic %}<a class="indexButton" href="{% url 'joc:pronostic' %}">{% trans "Fes el pronòstic" %}</a>{% endblock %}</li>
+    <li>{% block nav-classificacio %}<a class="indexButton" href="{% url 'joc:classificacio' %}">{% trans "Consulta la classificació" %}</a>{% endblock %}</li>
     <li>{% block nav-consulta %}<a class="indexButton" href="{% url 'joc:consulta' %}">{% trans "Consulta el teu pronòstic" %}</a>{% endblock %}</li>
     {% if pronostic_acabat %}
     <li>{% block nav-consulta-grups %}<a class="indexButton" href="{% url 'joc:consulta_grups' %}">{% trans "Consulta els teus grups " %}</a>{% endblock %}</li>

@@ -33,27 +33,35 @@
 <tr class="linia_usuaris">
 <td align="center">{{ pronostic.partit.grup.nom }}</td>
 <td>{{ pronostic.partit.diaihora }}</td>
-{% if pronostic.empat == 1 or pronostic.gols1 > pronostic.gols2 %}
+{% if pronostic.gols1 > pronostic.gols2 %}
+<td class="linia_bona">
+{% elif pronostic.gols1 == pronostic.gols2 and pronostic.empat == 1 %}
 <td class="linia_bona">
 {% else %}
 <td>
 {% endif %}
 {{ pronostic.equip1.nom }}
 </td>
-{% if pronostic.empat == 1 or pronostic.gols1 > pronostic.gols2 %}
+{% if pronostic.gols1 > pronostic.gols2 %}
+<td class="linia_bona" align="center">
+{% elif pronostic.gols1 == pronostic.gols2 and pronostic.empat == 1 %}
 <td class="linia_bona" align="center">
 {% else %}
 <td align="center">
 {% endif %}
 {{ pronostic.gols1 }}</td>
-{% if pronostic.empat == 2 or pronostic.gols1 < pronostic.gols2 %}
+{% if pronostic.gols1 < pronostic.gols2 %}
+<td class="linia_bona">
+{% elif pronostic.gols1 == pronostic.gols2 and pronostic.empat == 2 %}
 <td class="linia_bona">
 {% else %}
 <td>
 {% endif %}
 {{ pronostic.equip2.nom }}
 </td>
-{% if pronostic.empat == 2 or pronostic.gols1 < pronostic.gols2 %}
+{% if pronostic.gols1 < pronostic.gols2 %}
+<td class="linia_bona" align="center">
+{% elif pronostic.gols1 == pronostic.gols2 and pronostic.empat == 2 %}
 <td class="linia_bona" align="center">
 {% else %}
 <td align="center">
