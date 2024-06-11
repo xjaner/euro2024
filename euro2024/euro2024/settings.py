@@ -172,6 +172,7 @@ REGISTRATION_DEFAULT_FROM_EMAIL = 'El Joc de l\'Eurocopa 2024 <eljocdeleurocopa@
 EQUIPS_PER_GRUP = 4
 NUM_GRUPS = 6
 ID_ADMIN = 1
+NUM_PARTITS = 51
 
 # http://django-registration-redux.readthedocs.io/en/latest/quickstart.html
 ACCOUNT_ACTIVATION_DAYS = 7  # One-week activation window; you may, of course, use a different vlue

@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Q, F
+from django.conf import settings
 from django.contrib.auth.models import User
 
 # from django_registration.models import RegistrationProfile
@@ -20,6 +21,12 @@ class Jugador(models.Model):
     def __str__(self):
         return self.usuari.username
 
+    @property
+    def pronostic_acabat(self):
+        return PronosticPartit.objects.filter(
+            jugador=self,
+            partit_id=settings.NUM_PARTITS
+        ).exists()
 
 class Grup(models.Model):
     nom = models.CharField(max_length=32)
