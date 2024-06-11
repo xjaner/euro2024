@@ -11,7 +11,7 @@ def approve_players(modeladmin, request, queryset):
 
 class JugadorAdmin(admin.ModelAdmin):
     actions = [approve_players]
-    list_display = ['usuari', 'get_first_name', 'get_is_active', 'get_date_joined']
+    list_display = ['usuari', 'get_first_name', 'get_is_active', 'get_pronostic_acabat', 'get_date_joined']
     list_filter = ['usuari__is_active']
     ordering = ['-usuari__date_joined']
 
@@ -26,5 +26,9 @@ class JugadorAdmin(admin.ModelAdmin):
     @admin.display(description='Activat?')
     def get_is_active(self, obj):
         return obj.usuari.is_active
+
+    @admin.display(description='Pronòstic Acabat?')
+    def get_pronostic_acabat(self, obj):
+        return obj.pronostic_acabat
 
 admin.site.register(Jugador, JugadorAdmin)
